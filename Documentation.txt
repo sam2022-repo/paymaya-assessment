@@ -1,0 +1,43 @@
+SETUP
+1) Download and Install Ruby from https://rubyinstaller.org/downloads/
+2) Pull repo in here https://github.com/sam2022-repo/paymaya-assessment/upload
+3) Install Ruby Gems by opening a terminal then change directory to the repository then enter this on terminal 'gem install bundler'
+
+HOW TO RUN THE API TEST
+1) Open a terminal
+2) Change directory to repository
+3) Enter on terminal set ENV_NAME=test_env
+4) Enter on terminal 'rake api_test' #format 'rake <filename from spec folder minus '_spec'>'
+
+
+#### DOCUMENTATION ####
+
+Parent Class: Paymaya.rb (/lib/Paymaya.rb)
+--Inclusion of all Ruby Gems to be used in the project
+
+class WEB
+--Initialization of Selenium Webdriver
+--Inclusion of Modules related to web testing
+
+class API
+--Initialization of API
+--API Calls
+
+get_api_call
+-- GET call
+-- retrieves data from ENV['URL'], declared in (/environments/test_env.env) URL var
+-- p_attributes => added attributes can be use to filter retrieved data
+
+post_api_call
+-- POST CALL
+-- post data to ENV['URL'], declared in (/environments/test_env.env) URL var
+-- p_attributes => data to be posted\payload
+
+## LIBRARIES
+-- /lib => functions or method repository
+-- /lib/modules => functions or method repo by module or page
+-- /lib/modules/helpers => base functions such webdriver commands wrapper, test data generator, locators
+
+## TEST FILE
+-- /spec => repository of ALL test files and should be indicated by having _spec.rb suffix
+
