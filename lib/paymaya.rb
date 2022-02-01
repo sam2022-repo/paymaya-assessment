@@ -27,7 +27,6 @@ require 'time'
 require File.expand_path(File.dirname(__FILE__) + '/modules/helpers/webdriver_commands')
 require File.expand_path(File.dirname(__FILE__) + '/modules/helpers/locators')
 require File.expand_path(File.dirname(__FILE__) + '/modules/helpers/testdata')
-require File.expand_path(File.dirname(__FILE__) + '/modules/reusable_functions')
 require File.expand_path(File.dirname(__FILE__) + '/modules/payee')
 require File.expand_path(File.dirname(__FILE__) + '/modules/payment')
 
@@ -39,7 +38,6 @@ class WEB < Selenium::WebDriver::Driver
   ###### ---------------- WEB UI ------------------- ######
   include WebDriverCommands
   include Locators
-  include ReusableFunctions
   include TestData
   include Payee
   include Payment
